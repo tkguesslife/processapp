@@ -800,7 +800,7 @@
         </aside>
         <!-- end: sidebar -->
 
-        <section role="main" class="content-body">
+        <section role="main" class="content-body" ng-view>
             <header class="page-header">
                 <h2>Dashboard</h2>
 
@@ -1647,6 +1647,7 @@
 <script src="bower_components/jquery/dist/jquery.min.js"></script>
 <script src="bower_components/jquery-mobile-bower/js/jquery.mobile-1.4.5.min.js"></script>
 <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="bower_components/angular/angular.min.js"></script>
 <script src="bower_components/nanoscroller/bin/javascripts/jquery.nanoscroller.min.js"></script>
 <script src="bower_components/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js"></script>
 <script src="bower_components/magnific-popup/dist/jquery.magnific-popup.min.js"></script>
@@ -1668,7 +1669,7 @@
 <script src="js/theme.init.js"></script>
 
 <!--Grunt combined JS file-->
-
+<script src="app/requirejs/processApp-combined.js"></script>
 
 
 <!-- Examples -->
