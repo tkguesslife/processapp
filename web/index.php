@@ -38,7 +38,7 @@
     <link rel="stylesheet" href="css/theme-custom.css">
 
     <!-- Head Libs -->
-<!--    <script src="bower_components/modernizr/" > </script>-->
+    <script src="bower_components/modernizr/modernizr.js" > </script>
 </head>
 <body>
 <section class="body">
@@ -133,7 +133,7 @@
                                 <li>
                                     <a href="#" class="clearfix">
                                         <figure class="image">
-                                            <img src="assets/images/!sample-user.jpg" alt="Joseph Doe Junior" class="img-circle" />
+                                            <img src="images/!sample-user.jpg" alt="Joseph Doe Junior" class="img-circle" />
                                         </figure>
                                         <span class="title">Joseph Doe</span>
                                         <span class="message">Lorem ipsum dolor sit.</span>
@@ -142,7 +142,7 @@
                                 <li>
                                     <a href="#" class="clearfix">
                                         <figure class="image">
-                                            <img src="assets/images/!sample-user.jpg" alt="Joseph Junior" class="img-circle" />
+                                            <img src="images/!sample-user.jpg" alt="Joseph Junior" class="img-circle" />
                                         </figure>
                                         <span class="title">Joseph Junior</span>
                                         <span class="message truncate">Truncated message. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sit amet lacinia orci. Proin vestibulum eget risus non luctus. Nunc cursus lacinia lacinia. Nulla molestie malesuada est ac tincidunt. Quisque eget convallis diam, nec venenatis risus. Vestibulum blandit faucibus est et malesuada. Sed interdum cursus dui nec venenatis. Pellentesque non nisi lobortis, rutrum eros ut, convallis nisi. Sed tellus turpis, dignissim sit amet tristique quis, pretium id est. Sed aliquam diam diam, sit amet faucibus tellus ultricies eu. Aliquam lacinia nibh a metus bibendum, eu commodo eros commodo. Sed commodo molestie elit, a molestie lacus porttitor id. Donec facilisis varius sapien, ac fringilla velit porttitor et. Nam tincidunt gravida dui, sed pharetra odio pharetra nec. Duis consectetur venenatis pharetra. Vestibulum egestas nisi quis elementum elementum.</span>
@@ -151,7 +151,7 @@
                                 <li>
                                     <a href="#" class="clearfix">
                                         <figure class="image">
-                                            <img src="assets/images/!sample-user.jpg" alt="Joe Junior" class="img-circle" />
+                                            <img src="images/!sample-user.jpg" alt="Joe Junior" class="img-circle" />
                                         </figure>
                                         <span class="title">Joe Junior</span>
                                         <span class="message">Lorem ipsum dolor sit.</span>
@@ -160,7 +160,7 @@
                                 <li>
                                     <a href="#" class="clearfix">
                                         <figure class="image">
-                                            <img src="assets/images/!sample-user.jpg" alt="Joseph Junior" class="img-circle" />
+                                            <img src="images/!sample-user.jpg" alt="Joseph Junior" class="img-circle" />
                                         </figure>
                                         <span class="title">Joseph Junior</span>
                                         <span class="message">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sit amet lacinia orci. Proin vestibulum eget risus non luctus. Nunc cursus lacinia lacinia. Nulla molestie malesuada est ac tincidunt. Quisque eget convallis diam.</span>
@@ -234,7 +234,7 @@
             <div id="userbox" class="userbox">
                 <a href="#" data-toggle="dropdown">
                     <figure class="profile-picture">
-                        <img src="assets/images/!logged-user.jpg" alt="Joseph Doe" class="img-circle" data-lock-picture="assets/images/!logged-user.jpg" />
+                        <img src="images/!logged-user.jpg" alt="Joseph Doe" class="img-circle" data-lock-picture="images/!logged-user.jpg" />
                     </figure>
                     <div class="profile-info" data-lock-name="John Doe" data-lock-email="johndoe@okler.com">
                         <span class="name">John Doe Junior</span>
@@ -1138,7 +1138,7 @@
 
                                     <div class="widget-profile-info">
                                         <div class="profile-picture">
-                                            <img src="assets/images/!logged-user.jpg">
+                                            <img src="images/!logged-user.jpg">
                                         </div>
                                         <div class="profile-info">
                                             <h4 class="name text-weight-semibold">John Doe</h4>
@@ -1258,28 +1258,28 @@
                                                 <ul class="simple-user-list mb-xlg">
                                                     <li>
                                                         <figure class="image rounded">
-                                                            <img src="assets/images/!sample-user.jpg" alt="Joseph Doe Junior" class="img-circle">
+                                                            <img src="images/!sample-user.jpg" alt="Joseph Doe Junior" class="img-circle">
                                                         </figure>
                                                         <span class="title">Joseph Doe Junior</span>
                                                         <span class="message">Lorem ipsum dolor sit.</span>
                                                     </li>
                                                     <li>
                                                         <figure class="image rounded">
-                                                            <img src="assets/images/!sample-user.jpg" alt="Joseph Junior" class="img-circle">
+                                                            <img src="images/!sample-user.jpg" alt="Joseph Junior" class="img-circle">
                                                         </figure>
                                                         <span class="title">Joseph Junior</span>
                                                         <span class="message">Lorem ipsum dolor sit.</span>
                                                     </li>
                                                     <li>
                                                         <figure class="image rounded">
-                                                            <img src="assets/images/!sample-user.jpg" alt="Joe Junior" class="img-circle">
+                                                            <img src="images/!sample-user.jpg" alt="Joe Junior" class="img-circle">
                                                         </figure>
                                                         <span class="title">Joe Junior</span>
                                                         <span class="message">Lorem ipsum dolor sit.</span>
                                                     </li>
                                                     <li>
                                                         <figure class="image rounded">
-                                                            <img src="assets/images/!sample-user.jpg" alt="Joseph Doe Junior" class="img-circle">
+                                                            <img src="images/!sample-user.jpg" alt="Joseph Doe Junior" class="img-circle">
                                                         </figure>
                                                         <span class="title">Joseph Doe Junior</span>
                                                         <span class="message">Lorem ipsum dolor sit.</span>
@@ -1356,21 +1356,21 @@
                                 <ul class="simple-user-list">
                                     <li>
                                         <figure class="image rounded">
-                                            <img src="assets/images/!sample-user.jpg" alt="Joseph Doe Junior" class="img-circle">
+                                            <img src="images/!sample-user.jpg" alt="Joseph Doe Junior" class="img-circle">
                                         </figure>
                                         <span class="title">Joseph Doe Junior</span>
                                         <span class="message truncate">Lorem ipsum dolor sit.</span>
                                     </li>
                                     <li>
                                         <figure class="image rounded">
-                                            <img src="assets/images/!sample-user.jpg" alt="Joseph Junior" class="img-circle">
+                                            <img src="images/!sample-user.jpg" alt="Joseph Junior" class="img-circle">
                                         </figure>
                                         <span class="title">Joseph Junior</span>
                                         <span class="message truncate">Lorem ipsum dolor sit.</span>
                                     </li>
                                     <li>
                                         <figure class="image rounded">
-                                            <img src="assets/images/!sample-user.jpg" alt="Joe Junior" class="img-circle">
+                                            <img src="images/!sample-user.jpg" alt="Joe Junior" class="img-circle">
                                         </figure>
                                         <span class="title">Joe Junior</span>
                                         <span class="message truncate">Lorem ipsum dolor sit.</span>
@@ -1425,8 +1425,8 @@
                                                     Checkout! How cool is that!
                                                 </p>
                                                 <div class="thumbnail-gallery">
-                                                    <a class="img-thumbnail lightbox" href="assets/images/projects/project-4.jpg" data-plugin-options='{ "type":"image" }'>
-                                                        <img class="img-responsive" width="215" src="assets/images/projects/project-4.jpg">
+                                                    <a class="img-thumbnail lightbox" href="images/projects/project-4.jpg" data-plugin-options='{ "type":"image" }'>
+                                                        <img class="img-responsive" width="215" src="images/projects/project-4.jpg">
 																<span class="zoom">
 																	<i class="fa fa-search"></i>
 																</span>
@@ -1600,7 +1600,7 @@
                         <ul>
                             <li class="status-online">
                                 <figure class="profile-picture">
-                                    <img src="assets/images/!sample-user.jpg" alt="Joseph Doe" class="img-circle">
+                                    <img src="images/!sample-user.jpg" alt="Joseph Doe" class="img-circle">
                                 </figure>
                                 <div class="profile-info">
                                     <span class="name">Joseph Doe Junior</span>
@@ -1609,7 +1609,7 @@
                             </li>
                             <li class="status-online">
                                 <figure class="profile-picture">
-                                    <img src="assets/images/!sample-user.jpg" alt="Joseph Doe" class="img-circle">
+                                    <img src="images/!sample-user.jpg" alt="Joseph Doe" class="img-circle">
                                 </figure>
                                 <div class="profile-info">
                                     <span class="name">Joseph Doe Junior</span>
@@ -1618,7 +1618,7 @@
                             </li>
                             <li class="status-offline">
                                 <figure class="profile-picture">
-                                    <img src="assets/images/!sample-user.jpg" alt="Joseph Doe" class="img-circle">
+                                    <img src="images/!sample-user.jpg" alt="Joseph Doe" class="img-circle">
                                 </figure>
                                 <div class="profile-info">
                                     <span class="name">Joseph Doe Junior</span>
@@ -1627,7 +1627,7 @@
                             </li>
                             <li class="status-offline">
                                 <figure class="profile-picture">
-                                    <img src="assets/images/!sample-user.jpg" alt="Joseph Doe" class="img-circle">
+                                    <img src="images/!sample-user.jpg" alt="Joseph Doe" class="img-circle">
                                 </figure>
                                 <div class="profile-info">
                                     <span class="name">Joseph Doe Junior</span>
@@ -1645,7 +1645,9 @@
 
 <!-- Vendor -->
 <script src="bower_components/jquery/dist/jquery.min.js"></script>
+<script src="bower_components/jquery-ui/jquery-ui.min.js"></script>
 <script src="bower_components/jquery-mobile-bower/js/jquery.mobile-1.4.5.min.js"></script>
+<script src="bower_components/jquery-flot/jquery.flot.js"></script>
 <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
 <script src="bower_components/angular/angular.min.js"></script>
 <script src="bower_components/nanoscroller/bin/javascripts/jquery.nanoscroller.min.js"></script>
@@ -1653,11 +1655,17 @@
 <script src="bower_components/magnific-popup/dist/jquery.magnific-popup.min.js"></script>
 <script src="bower_components/jquery-placeholder/jquery.placeholder.min.js"></script>
 
+<script src="bower_components/angular-resource/angular-resource.min.js"></script>
+<script src="bower_components/angular-route/angular-route.min.js"></script>
+<script src="bower_components/ng-grid/ng-grid-2.0.14.debug.js"></script>
+
+
 <!-- Specific Page Vendor -->
-<script src="bower_components/jquery-ui/themes/dark-hive/jquery-ui.min.css"></script>
+<!--<script src="bower_components/jquery-ui/themes/dark-hive/jquery-ui.min.css"></script>-->
 <script src="bower_components/jqueryui-touch-punch/jquery.ui.touch-punch.min.js"></script>
 <script src="bower_components/jquery_appear/jquery.appear.js"></script>
 <script src="bower_components/bootstrap-multiselect/dist/js/bootstrap-multiselect.js"></script>
+<script src="bower_components/requirejs/require.js"></script>
 
 <!-- Theme Base, Components and Settings -->
 <script src="js/theme.js"></script>
@@ -1670,7 +1678,13 @@
 
 <!--Grunt combined JS file-->
 <script src="app/requirejs/processApp-combined.js"></script>
+<script>
+    (function () {
+        require(['main.js', function () {
 
+        }]);
+    }());
+</script>
 
 <!-- Examples -->
 <script src="js/dashboard/examples.dashboard.js"></script>

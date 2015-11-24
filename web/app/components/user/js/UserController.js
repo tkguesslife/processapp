@@ -1,3 +1,11 @@
-/**
- * Created by tk-mac on 15/11/24.
- */
+define([],function (){
+
+    function UserController(){
+
+
+
+    }
+
+    return UserController;
+
+})

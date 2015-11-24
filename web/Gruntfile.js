@@ -34,7 +34,7 @@ module.exports = function (grunt) {
         },
         watch: {
             scripts: {
-                files: ['./app/**/*.js', './app/**/**/**/*.js', '!./app/requirejs/processApp-combined.js'],
+                files: ['./app/**/*.js', './app/**/**/**/**/*.js', './app/**/**/**/*.js', '!./app/requirejs/processApp-combined.js'],
                 tasks: ['dev'],
                 options: {
                     spawn: false

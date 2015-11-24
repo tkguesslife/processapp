@@ -1,3 +1,24 @@
-/**
- * Created by tk-mac on 15/11/24.
- */
+define([], function () {
+    'use strict';
+
+    function config($routeProvider) {
+        $routeProvider.
+            when('/users/list', {
+                templateUrl: '/app/components/user/views/list.html',
+                controller: 'UserController'
+            }).
+            when('/', {
+                redirectTo: '/'
+            }).
+            otherwise({
+                redirectTo: '/'
+            });
+
+
+    }
+
+    config.$inject = ['$routeProvider'];
+
+    return config;
+
+})

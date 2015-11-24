@@ -29,6 +29,7 @@
     "morrisjs": "~0.5.1",
     "modernizr": "~3.2.0",
     "jqueryui-touch-punch": "*",
-    "jquery_appear": "~0.3.6"
+    "jquery_appear": "~0.3.6",
+    "jquery-flot": "~0.8.3"
   }
 }
