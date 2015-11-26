@@ -8,17 +8,16 @@ define([], function () {
                 controller: 'UserController'
             }).
             when('/', {
-                redirectTo: '/'
+                templateUrl: '/app/components/dashboard/views/home.html',
+                controller: 'DashboardController'
             }).
             otherwise({
-                redirectTo: '/'
+                redirectTo: '/users/list'
             });
-
 
     }
 
-    config.$inject = ['$routeProvider'];
-
+    config.$inject=['$routeProvider'];
     return config;
 
-})
+});
