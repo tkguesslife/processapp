@@ -1,3 +1,20 @@
+<?php
+
+require_once("../config/parameters.php");
+require_once("../config/util.php");
+
+
+
+/**
+ * Check if the user is loggedin
+ * @return type
+ */
+function sessionIsActive()
+{
+    return isset($_SESSION['token']);
+}
+
+?>
 <!doctype html>
 <html class="fixed">
 <head>
@@ -42,6 +59,7 @@
     <script src="vendor/modernizr/modernizr.js" ></script>
 </head>
 <body>
+<?php if(sessionIsActive()){ ?>
 <section class="body">
 
     <!-- start: header -->
@@ -883,6 +901,77 @@
         </div>
     </aside>
 </section>
+<?php }else{ ?>
+    <section class="body-sign">
+        <div class="center-sign">
+            <a href="/" class="logo pull-left">
+                <img src="images/logo.png" height="54" alt="Porto Admin" />
+            </a>
+
+            <div class="panel panel-sign">
+                <div class="panel-title-sign mt-xl text-right">
+                    <h2 class="title text-uppercase text-weight-bold m-none"><i class="fa fa-user mr-xs"></i> Sign In</h2>
+                </div>
+                <div class="panel-body">
+                    <form action="login.php" method="post" autocomplete="off">
+                        <?php if($_SESSION['login_error']){ ?>
+                        <div class="alert alert-danger alert-dismissible fade in" role="alert">
+                            <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span></button>
+                            <?php
+                            echo $_SESSION['login_error'];
+                            unset($_SESSION['login_error']);
+                            ?>
+                        </div>
+                        <?php } ?>
+                        <div class="form-group mb-lg">
+                            <label>Username</label>
+                            <div class="input-group input-group-icon">
+                                <input name="_username" id="username" type="text" class="form-control input-lg" placeholder="Email address" required="required"/>
+									<span class="input-group-addon">
+										<span class="icon icon-lg">
+											<i class="fa fa-user"></i>
+										</span>
+									</span>
+                            </div>
+                        </div>
+
+                        <div class="form-group mb-lg">
+                            <div class="clearfix">
+                                <label class="pull-left">Password</label>
+<!--                                <a href="pages-recover-password.html" class="pull-right">Lost Password?</a>-->
+                            </div>
+                            <div class="input-group input-group-icon">
+                                <input name="_password" id="password" type="password" class="form-control input-lg" placeholder="Password" required="required"/>
+									<span class="input-group-addon">
+										<span class="icon icon-lg">
+											<i class="fa fa-lock"></i>
+										</span>
+									</span>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-sm-8">
+                                <div class="checkbox-custom checkbox-default">
+                                    <input id="RememberMe" name="rememberme" type="checkbox"/>
+                                    <label for="RememberMe">Remember Me</label>
+                                </div>
+                            </div>
+                            <div class="col-sm-4 text-right">
+                                <button type="submit" class="btn btn-primary hidden-xs">Sign In</button>
+                                <button type="submit" class="btn btn-primary btn-block btn-lg visible-xs mt-lg">Sign In</button>
+                            </div>
+                        </div>
+
+                    </form>
+                </div>
+            </div>
+
+            <p class="text-center text-muted mt-md mb-md">&copy; Copyright {{ date().format('Y') }}. All Rights Reserved.</p>
+        </div>
+    </section>
+
+<?php }?>
 
 <!-- Vendor -->
 <script src="bower_components/jquery/dist/jquery.min.js"></script>

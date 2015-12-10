@@ -1,0 +1,4 @@
+<?php
+require_once("session.inc.php");
+define("WF_HOST", "http://ubu.workflow");
+define("ABSOLUTE_ATTACHMENTS_DIR", "/Users/tk-mac/www/workflow_attachments/production/");
