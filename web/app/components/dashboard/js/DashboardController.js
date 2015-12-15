@@ -3,6 +3,7 @@ define([], function(){
 
     function DashboardController($scope){
 
+
     }
 
     DashboardController.$inject = ['$scope'];

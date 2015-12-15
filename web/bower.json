@@ -30,6 +30,7 @@
     "modernizr": "~3.2.0",
     "jqueryui-touch-punch": "*",
     "jquery_appear": "~0.3.6",
-    "jquery-flot": "~0.8.3"
+    "jquery-flot": "~0.8.3",
+    "ngstorage": "~0.3.10"
   }
 }

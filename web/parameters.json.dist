@@ -1,0 +1,6 @@
+{
+  "urls": {
+    "BASE": "http://application.com",
+    "BASE_API": "http://api.application.com/api"
+  }
+}

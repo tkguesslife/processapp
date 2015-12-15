@@ -1,35 +1,38 @@
 define([
    'app/app.config',
+   'app/app.run',
+   'app/components/auth/js/AuthorisationController',
    'app/components/user/js/UserController',
-   'app/components/dashboard/js/DashboardController'
+   'app/components/dashboard/js/DashboardController',
+   'app/shared/Auth',
+   'app/shared/HTTPInterceptor'
 ],
-function (config, UserController, DashboardController){
+function (config, run, AuthorisationController, UserController, DashboardController, Auth, HTTPInterceptor){
     'use strict';
 
-    var processApp = angular.module('processApp',['ngRoute', 'ngResource', 'ngGrid', 'ui.bootstrap']);
+    var processApp = angular.module('processApp',['ngRoute', 'ngResource', 'ngGrid', 'ui.bootstrap', 'ngStorage']);
 
     processApp.config(config);
+    //processApp.constant('urls', {
+    //    BASE: 'http://processapp.net/index.php',
+    //    BASE_API: 'http://processflow.net/app_dev.php/api'
+    //});
+    processApp.controller('AuthorisationController', AuthorisationController);
     processApp.controller('UserController', UserController);
     processApp.controller('DashboardController', DashboardController);
+    processApp.factory('Auth', Auth);
+    processApp.factory('HTTPInterceptor',HTTPInterceptor);
+    processApp.run(run);
 
+    //bootstrapApplication();
     fetchData().then(bootstrapApplication);
 
     function fetchData() {
         var initInjector = angular.injector(["ng"]);
         var $http = initInjector.get("$http");
-
-        return $http.get('init.php')
+        return $http.get('parameters.json')
             .then(function (result) {
-
-                var cfg = {};
-                cfg.API_HOST = result.data.API_HOST;
-                cfg.token = result.data.token;
-                if (result.data.currentUser) {
-                    cfg.currentUser = result.data.currentUser;
-                    cfg.loggedInUserId = result.data.currentUser.id;
-                }
-                processApp.constant("cfg", cfg);
-
+                processApp.constant("urls", result.data.urls);
             }, function(errorResponse) {
                 // Handle error case
             });
