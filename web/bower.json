@@ -31,6 +31,7 @@
     "jqueryui-touch-punch": "*",
     "jquery_appear": "~0.3.6",
     "jquery-flot": "~0.8.3",
-    "ngstorage": "~0.3.10"
+    "ngstorage": "~0.3.10",
+    "angular-ui-router": "~0.2.15"
   }
 }

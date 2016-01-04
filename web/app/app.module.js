@@ -1,22 +1,20 @@
 define([
    'app/app.config',
    'app/app.run',
+   'app/components/app/js/AppController',
    'app/components/auth/js/AuthorisationController',
    'app/components/user/js/UserController',
    'app/components/dashboard/js/DashboardController',
-   'app/shared/Auth',
+   'app/components/auth/js/Auth',
    'app/shared/HTTPInterceptor'
 ],
-function (config, run, AuthorisationController, UserController, DashboardController, Auth, HTTPInterceptor){
+function (config, run, AppController, AuthorisationController, UserController, DashboardController, Auth, HTTPInterceptor){
     'use strict';
 
-    var processApp = angular.module('processApp',['ngRoute', 'ngResource', 'ngGrid', 'ui.bootstrap', 'ngStorage']);
+    var processApp = angular.module('processApp',['ngRoute', 'ngResource', 'ngGrid', 'ui.bootstrap', 'ngStorage', 'ui.router']);
 
     processApp.config(config);
-    //processApp.constant('urls', {
-    //    BASE: 'http://processapp.net/index.php',
-    //    BASE_API: 'http://processflow.net/app_dev.php/api'
-    //});
+    processApp.controller('AppController', AppController);
     processApp.controller('AuthorisationController', AuthorisationController);
     processApp.controller('UserController', UserController);
     processApp.controller('DashboardController', DashboardController);

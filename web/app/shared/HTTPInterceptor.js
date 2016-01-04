@@ -11,7 +11,6 @@ define([], function (){
         return svc;
 
         function request(config) {
-            console.log("HTTPInterceptor  request()");
             config.headers = config.headers || {};
             if ($localStorage.token) {
                 config.headers.Authorization = 'Bearer ' + $localStorage.token;

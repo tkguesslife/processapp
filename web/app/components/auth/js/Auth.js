@@ -15,6 +15,10 @@ define([], function(){
             },
             getTokenClaims: function () {
                 return getClaimsFromToken();
+            },
+            getCurrentUser: function(success, error){
+                getClaimsFromToken();
+                $http.get(urls.BASE_API+'/current_user').success(success).error(error)
             }
         };
 
@@ -46,6 +50,7 @@ define([], function(){
                 var encoded = token.split('.')[1];
                 user = JSON.parse(urlBase64Decode(encoded));
             }
+
             return user;
         }
     }

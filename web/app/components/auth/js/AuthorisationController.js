@@ -3,9 +3,17 @@ define([], function () {
     function AuthorisationController($rootScope, $scope, $location, $localStorage, Auth) {
 
         function successAuth(res) {
-            console.log(res);
+
             $localStorage.token = res.token;
+            Auth.getCurrentUser(saveCurrentUser, function(){
+                $rootScope.error  = 'Error saving current user'
+            });
             window.location = "/";
+        }
+
+        function saveCurrentUser(currentUser){
+            $localStorage.currentUser = currentUser;
+
         }
 
         $scope.signin = function () {
