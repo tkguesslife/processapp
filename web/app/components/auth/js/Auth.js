@@ -11,6 +11,7 @@ define([], function(){
             logout: function (success) {
                 tokenClaims = {};
                 delete $localStorage.token;
+                delete $localStorage.currentUser;
                 success();
             },
             getTokenClaims: function () {
@@ -49,6 +50,7 @@ define([], function(){
             if (typeof token !== 'undefined') {
                 var encoded = token.split('.')[1];
                 user = JSON.parse(urlBase64Decode(encoded));
+                console.log("Auth getClaimsFromToken()");
             }
 
             return user;

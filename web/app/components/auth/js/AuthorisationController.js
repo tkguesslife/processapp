@@ -8,12 +8,12 @@ define([], function () {
             Auth.getCurrentUser(saveCurrentUser, function(){
                 $rootScope.error  = 'Error saving current user'
             });
-            window.location = "/";
+
         }
 
         function saveCurrentUser(currentUser){
             $localStorage.currentUser = currentUser;
-
+            window.location = "/";
         }
 
         $scope.signin = function () {

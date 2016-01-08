@@ -6,12 +6,23 @@ define([
    'app/components/user/js/UserController',
    'app/components/dashboard/js/DashboardController',
    'app/components/auth/js/Auth',
-   'app/shared/HTTPInterceptor'
+   'app/shared/HTTPInterceptor',
+   'app/directives/ui-toggle'
 ],
-function (config, run, AppController, AuthorisationController, UserController, DashboardController, Auth, HTTPInterceptor){
+function (config, run, AppController, AuthorisationController, UserController, DashboardController, Auth, HTTPInterceptor, uiToggleClass){
     'use strict';
 
-    var processApp = angular.module('processApp',['ngRoute', 'ngResource', 'ngGrid', 'ui.bootstrap', 'ngStorage', 'ui.router']);
+    var processApp = angular.module('processApp',[
+        'ngAnimate',
+        'ngAria',
+        'ngRoute',
+        'ngResource',
+        'ui.utils',
+        'ui.bootstrap',
+        'ngStorage',
+        'ui.router',
+        'ngMaterial'
+    ]);
 
     processApp.config(config);
     processApp.controller('AppController', AppController);
@@ -20,6 +31,7 @@ function (config, run, AppController, AuthorisationController, UserController, D
     processApp.controller('DashboardController', DashboardController);
     processApp.factory('Auth', Auth);
     processApp.factory('HTTPInterceptor',HTTPInterceptor);
+    processApp.directive('uiToggleClass', uiToggleClass);
     processApp.run(run);
 
     //bootstrapApplication();
