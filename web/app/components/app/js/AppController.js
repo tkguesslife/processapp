@@ -14,7 +14,7 @@ define([], function(){
         isSmartDevice( $window ) && angular.element($window.document.body).addClass('smart');
         // config
         $scope.app = {
-            name: 'GTC CRM',
+            name: 'ProcessApp',
             version: '1.0.2',
             // for chart colors
             color: {

@@ -28,6 +28,17 @@ define([], function () {
                 controller:  "DashboardController",
                 data : { title: 'Something'}
             })
+            .state('app.user', {
+                url: "/user",
+                templateUrl: "/app/components/user/views/layout.html",
+                data : { title: 'User'}
+            })
+            .state('app.user.list', {
+                url: "/list",
+                templateUrl: "/app/components/user/views/list.html",
+                controller:  "UserController",
+                data : { title: 'User'}
+            })
             .state('auth', {
                 url: '/auth',
                 template: '<div class="indigo bg-big"><div ui-view class="fade-in-down smooth"></div></div>'
@@ -37,7 +48,7 @@ define([], function () {
                 templateUrl: "/app/components/auth/views/signin.html",
                 controller:  "AuthorisationController"
             })
-            ;
+        ;
 
         $httpProvider.interceptors.push('HTTPInterceptor');
 

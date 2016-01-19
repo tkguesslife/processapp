@@ -7,9 +7,10 @@ define([
    'app/components/dashboard/js/DashboardController',
    'app/components/auth/js/Auth',
    'app/shared/HTTPInterceptor',
-   'app/directives/ui-toggle'
+   'app/directives/ui-toggle',
+   'app/directives/ui-nav'
 ],
-function (config, run, AppController, AuthorisationController, UserController, DashboardController, Auth, HTTPInterceptor, uiToggleClass){
+function (config, run, AppController, AuthorisationController, UserController, DashboardController, Auth, HTTPInterceptor, uiToggleClass, uiNav){
     'use strict';
 
     var processApp = angular.module('processApp',[
@@ -32,6 +33,7 @@ function (config, run, AppController, AuthorisationController, UserController, D
     processApp.factory('Auth', Auth);
     processApp.factory('HTTPInterceptor',HTTPInterceptor);
     processApp.directive('uiToggleClass', uiToggleClass);
+    processApp.directive('uiNav', uiNav);
     processApp.run(run);
 
     //bootstrapApplication();
