@@ -1,4 +1,4 @@
-<div class="panel panel-card">
+<div class="panel panel-default">
     <div class="panel-heading">Users list</div>
 
     <table class="table">
@@ -13,11 +13,11 @@
         </tr>
         </thead>
         <tbody>
-        <tr>
-            <td>User1</td>
-            <td>Lastname</td>
-            <td>user@lastname.com</td>
-            <td>User Technologies</td>
+        <tr ng-repeat="user in users">
+            <td>{{user.first_name}}</td>
+            <td>{{user.last_name}}</td>
+            <td>{{user.email}}</td>
+            <td>{{user.organisation.name}}</td>
             <td>Active</td>
             <td>
                 <a href="/app_dev.php/secured/user/edit/tiko-banyini.html" title="Edit user details">Edit</a>
