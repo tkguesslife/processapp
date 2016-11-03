@@ -1,8 +1,8 @@
 define([], function(){
     'use strict'
 
-    function AppController($scope, Auth, $localStorage, $window, $document, $location, $rootScope, $timeout, $mdSidenav, $mdColorPalette, $anchorScroll){
-
+    function AppController($scope, Auth, $localStorage, $window, $document, $location, $rootScope, $timeout, $mdSidenav, $mdColorPalette, $anchorScroll, $state){
+        $scope.$state = $state;
         if (typeof $localStorage.token !== 'undefined'){
             $scope.currentUser = $localStorage.currentUser;
         }else {
@@ -14,7 +14,7 @@ define([], function(){
         isSmartDevice( $window ) && angular.element($window.document.body).addClass('smart');
         // config
         $scope.app = {
-            name: 'ProcessApp',
+            name: 'DropBooze ',
             version: '1.0.2',
             // for chart colors
             color: {
@@ -111,7 +111,7 @@ define([], function(){
 
     }
 
-    AppController.$inject = ['$scope', 'Auth', '$localStorage', '$window', '$document', '$location', '$rootScope', '$timeout', '$mdSidenav', '$mdColorPalette', '$anchorScroll'];
+    AppController.$inject = ['$scope', 'Auth', '$localStorage', '$window', '$document', '$location', '$rootScope', '$timeout', '$mdSidenav', '$mdColorPalette', '$anchorScroll', '$state'];
 
     return AppController;
 })

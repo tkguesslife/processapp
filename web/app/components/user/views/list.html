@@ -13,14 +13,14 @@
         </tr>
         </thead>
         <tbody>
-        <tr ng-repeat="user in users">
+        <tr ng-repeat="user in UserCtrl.users">
             <td>{{user.first_name}}</td>
             <td>{{user.last_name}}</td>
             <td>{{user.email}}</td>
             <td>{{user.organisation.name}}</td>
             <td>Active</td>
             <td>
-                <a href="/app_dev.php/secured/user/edit/tiko-banyini.html" title="Edit user details">Edit</a>
+                <a ui-sref="app.user.edit({userId:user.id})" title="Edit user details">Edit</a>
             </td>
         </tr>
         </tbody>

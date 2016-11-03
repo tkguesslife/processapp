@@ -20,8 +20,12 @@ define([], function (){
 
         function responseError(response) {
             if (response.status === 401 || response.status === 403) {
-                delete $localStorage.token;
-                $location.path('/signin');
+
+                if(response.data.message != "Bad credentials"){
+                    delete $localStorage.token;
+                    $location.path('/auth/signin');
+
+                }
             }
             return $q.reject(response);
         }

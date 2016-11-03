@@ -26,18 +26,31 @@ define([], function () {
                 url: "/dashboard",
                 templateUrl: "/app/components/dashboard/views/home.html",
                 controller:  "DashboardController",
-                data : { title: 'Something'}
+                data : { title: 'Dashboard'}
             })
             .state('app.user', {
                 url: "/user",
                 templateUrl: "/app/components/user/views/layout.html",
                 data : { title: 'User'}
             })
+            .state('app.user.new', {
+                url: "/new",
+                templateUrl: "/app/components/user/views/new.html",
+                controller:  "UserController as UserCtrl",
+                data : { title: 'User', view: 'new'}
+            })
             .state('app.user.list', {
                 url: "/list",
                 templateUrl: "/app/components/user/views/list.html",
-                controller:  "UserController",
-                data : { title: 'User'}
+                controller:  "UserController as UserCtrl",
+
+                data : { title: 'User', view: 'list'}
+            })
+            .state('app.user.edit', {
+                url: "/:userId/edit",
+                templateUrl: "/app/components/user/views/edit.html",
+                controller:  "UserController as UserCtrl",
+                data : { title: 'User', view: 'edit'}
             })
             .state('auth', {
                 url: '/auth',
