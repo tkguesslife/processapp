@@ -12,3 +12,4 @@
 
 1: Put all the files on a local server (must include the "app" and "libs" folder)
 2: Open "http://localhost/app/" in browser
+3.
