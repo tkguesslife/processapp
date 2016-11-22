@@ -3,10 +3,7 @@ define([], function(){
     function Auth($http, $localStorage, urls){
         var svc = {
             signup: function (data, success, error) {
-                $http.post(urls.BASE + '/signup', data).success(success).error(error)
-            },
-            signin: function (data, success, error) {
-                // $http.post(urls.BASE_API + '/login_check', data).success(success).error(error)
+                //$http.post(urls.BASE + '/signup', data).success(success).error(error)
                 $http({
                     method: 'POST',
                     url: urls.BASE_API + '/member/create.json',
@@ -15,6 +12,9 @@ define([], function(){
                 }).then(function (response) {
                     return response;
                 });
+            },
+            signin: function (data, success, error) {
+                $http.post(urls.BASE_API + '/login_check', data).success(success).error(error)
             },
             logout: function (success) {
                 tokenClaims = {};

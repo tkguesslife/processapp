@@ -37,7 +37,7 @@ define([], function () {
                 lastName:$scope.lastName
             };
 
-            Auth.signin(formData, successAuth, function () {
+            Auth.signup(formData, successAuth, function () {
                 $rootScope.error = 'Invalid username or password.';
             });
         };
