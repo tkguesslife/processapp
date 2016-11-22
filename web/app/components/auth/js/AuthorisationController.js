@@ -30,13 +30,18 @@ define([], function () {
         $scope.signup = function () {
             var formData = {
                 email: $scope.email,
-                password: $scope.password
+                password: $scope.password,
+                mobileNumber:'0724055192',
+                idNumber:$scope.idNumber,
+                firstName:$scope.firstName,
+                lastName:$scope.lastName
             };
 
-            Auth.signup(formData, successAuth, function () {
-                $rootScope.error = 'Failed to signup';
-            })
+            Auth.signin(formData, successAuth, function () {
+                $rootScope.error = 'Invalid username or password.';
+            });
         };
+
 
         $scope.logout = function () {
             Auth.logout(function () {

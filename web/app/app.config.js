@@ -28,6 +28,30 @@ define([], function () {
                 controller:  "DashboardController",
                 data : { title: 'Dashboard'}
             })
+            .state('app.member', {
+                url: "/member",
+                templateUrl: "/app/components/member/views/layout.html",
+                data : { title: 'Member'}
+            })
+            .state('app.member.new', {
+                url: "/newmember",
+                templateUrl: "/app/components/member/views/signup.html",
+                controller:  "MemberController as MemberCtrl",
+                data : { title: 'Member', view: 'new'}
+            })
+            .state('app.member.list', {
+                url: "/list",
+                templateUrl: "/app/components/member/views/list.html",
+                controller:  "MemberController as MemberCtrl",
+
+                data : { title: 'Member', view: 'list'}
+            })
+            .state('app.member.edit', {
+                url: "/:userId/edit",
+                templateUrl: "/app/components/member/views/edit.html",
+                controller:  "MemberController as MemberCtrl",
+                data : { title: 'Member', view: 'edit'}
+            })
             .state('app.user', {
                 url: "/user",
                 templateUrl: "/app/components/user/views/layout.html",
@@ -59,6 +83,11 @@ define([], function () {
             .state('auth.signin', {
                 url: "/signin",
                 templateUrl: "/app/components/auth/views/signin.html",
+                controller:  "AuthorisationController"
+            })
+            .state('auth.signup', {
+                url: "/signup",
+                templateUrl: "/app/components/auth/views/signup.html",
                 controller:  "AuthorisationController"
             })
         ;

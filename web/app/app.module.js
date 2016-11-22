@@ -5,13 +5,15 @@ define([
    'app/components/auth/js/AuthorisationController',
    'app/components/user/js/UserController',
    'app/components/user/js/UserService',
+   'app/components/member/js/MemberController',
+   'app/components/member/js/MemberService',
    'app/components/dashboard/js/DashboardController',
    'app/components/auth/js/Auth',
    'app/shared/HTTPInterceptor',
    'app/directives/ui-toggle',
    'app/directives/ui-nav'
 ],
-function (config, run, AppController, AuthorisationController, UserController, UserService, DashboardController, Auth, HTTPInterceptor, uiToggleClass, uiNav){
+function (config, run, AppController, AuthorisationController, UserController, UserService, MemberController,MemberService, DashboardController, Auth, HTTPInterceptor, uiToggleClass, uiNav){
     'use strict';
 
     var processApp = angular.module('processApp',[
@@ -30,10 +32,12 @@ function (config, run, AppController, AuthorisationController, UserController, U
     processApp.controller('AppController', AppController);
     processApp.controller('AuthorisationController', AuthorisationController);
     processApp.controller('UserController', UserController);
+    processApp.controller('MemberController', MemberController);
     processApp.controller('DashboardController', DashboardController);
     processApp.factory('Auth', Auth);
     processApp.factory('HTTPInterceptor',HTTPInterceptor);
     processApp.factory('UserService',UserService);
+    processApp.factory('MemberService',MemberService);
     processApp.directive('uiToggleClass', uiToggleClass);
     processApp.directive('uiNav', uiNav);
     processApp.run(run);

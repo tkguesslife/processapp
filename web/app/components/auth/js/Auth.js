@@ -6,7 +6,15 @@ define([], function(){
                 $http.post(urls.BASE + '/signup', data).success(success).error(error)
             },
             signin: function (data, success, error) {
-                $http.post(urls.BASE_API + '/login_check', data).success(success).error(error)
+                // $http.post(urls.BASE_API + '/login_check', data).success(success).error(error)
+                $http({
+                    method: 'POST',
+                    url: urls.BASE_API + '/member/create.json',
+                    data: $.param(data), // pass in data as strings
+                    headers: {'Content-Type': 'application/x-www-form-urlencoded'}  // set the headers so angular passing info as form data (not request payload)
+                }).then(function (response) {
+                    return response;
+                });
             },
             logout: function (success) {
                 tokenClaims = {};

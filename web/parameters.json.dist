@@ -1,6 +1,6 @@
 {
   "urls": {
-    "BASE": "http://application.com",
-    "BASE_API": "http://api.application.com/api"
+    "BASE": "http:processflow.net/",
+    "BASE_API": "http://processflow.net/api"
   }
 }
